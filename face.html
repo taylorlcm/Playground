@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FUN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <script>
+    $(document).ready(function(){
+    $(".airplane").click(function(){
+        $(".circle").toggleClass("rolling");
+        $(".airplane").toggleClass("fly");
+    });
+
+        
+    $(".fire").click(function(){
+        var fc =  $(".firecircle");
+        var f =  $(".fire");
+        fc.animate({width: '700px',
+                    height:'900px',
+                    top:'-10px',
+                    left:'230px'
+                   }, 5000);
+        /* f.animate({width: '500px'
+                   }, 5000);*/
+        fc.css("background-color","white");
+
+});
+        });
+
+       
+    
+    
+    </script>
+        
+
+    
+    
+<style>
+    img{ position: absolute;
+    }
+    .leftH {width: 250px; right:50%; z-index:2;}
+    .rightH{width: 250px; left:50%;  z-index:2;}
+    
+    .leftHs {width: 250px; right:50%; z-index:1; }
+    .rightHs{width: 245px; left:50%; z-index:0;  }
+    
+    .earphone{width: 45px; left:59.6%;  top:17%; }
+    .pen{width: 45px; left:56%; top:21.5%; }
+    .eye{width: 75px; left:54.6%; top:34.3%; }
+    .note{width: 40px; left:66.2%; top:36%; }
+    .airplane{width: 50px; left:45.5%; top:92.5%; }
+    .fire{width: 26px; left:19%; top:10%; }
+    
+    .circle{background-color:; width: 500px; height: 500px; position: absolute; border-radius: 100%; left:32.4%; top:23.5%; z-index: 0;}
+    
+     .firecircle{background-color:; width: 40px; height: 40px; position: absolute; border-radius: 100%; left:51.3%; top:66.5%; z-index: 0;}
+    
+    .leftface:hover .leftH { 
+      z-index:0;
+    }
+    .rightface:hover .rightH{
+       z-index:0;
+    }
+    .rightface:hover .circle{
+       z-index:2;
+    }
+    .rightface:hover .firecircle{
+       z-index:2;
+    }
+    
+    
+    .rolling{
+        animation: roll 7s;
+    }
+      
+    .fly{
+        animation: fly 7s;
+        animation-delay: 3s;
+    }
+    
+     @keyframes roll {
+        0%{transform: rotate(0deg) }
+        100%{transform: rotate(-360deg) }
+    }
+    
+    @keyframes fly {
+        0%{transform: translate(0px,0px)   }
+        100%{transform: translate(700px,400px) }
+    }
+
+</style>    
+    
+    
+</head>
+<body>
+
+<div class="leftface">
+    <img class="leftH" alt="leftside of head" src="images/lefthead.png"/>
+    <img class="leftHs" alt="leftside of head" src="images/lefthead1.png"/>
+</div>
+
+<div class="rightface">
+    <img class="rightH" alt="rightside of head" src="images/righthead.png"/>
+    <img class="rightHs" alt="rightside of head" src="images/head_left_noobjects.png"/>
+    
+    <img class="earphone" alt="earphone icon" src="images/echobox_earphone1.png"/>
+    <img class="pen" alt="pen icon" src="images/drawing_pen1.png"/>
+    <img class="eye" alt="eye icon" src="images/3d_eye1.png"/>
+    <img class="note" alt="misicaian note icon" src="images/note_musician1.png"/>
+    <div class="circle">
+    <img class="airplane" alt="airplane icon" src="images/plane_tappyflight1.png"/>
+    </div>
+    <div class="firecircle">
+    <img class="fire" alt="fire icon" src="images/fire_camp1.png"/>
+    </div>
+
+
+
+
+    
+</div>
+    
+
+</body>
+</html>
